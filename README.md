@@ -8,3 +8,7 @@ I created the jekyll blog using the following command. Because the directory con
 jekyll new . --force
 
 added gem 'jekyll-analytics' to gemfile and ran bundle to install it
+
+added - jekyll-analytics to the plugins section of _config.yml
+
+configured jekyll_analytics in _config.yml
