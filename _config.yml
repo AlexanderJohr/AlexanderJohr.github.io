@@ -1,9 +1,11 @@
 title: Portfolio of Alexander Johr
+lang: de
 author:
   name: AlexanderJohr
   email: alexander.johr@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
   My name is Alexander Johr. Welcome to my Portfolio.
+permalink: /:year/:month/:day/:title/
 
 google_analytics: G-RT79Y7XSXB
 
@@ -55,3 +57,4 @@ minima:
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+
