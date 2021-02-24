@@ -4,73 +4,91 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+  <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
   {{ content }}
 
 
   {% if site.paginate %}
-    {% assign posts = paginator.posts %}
+  {% assign posts = paginator.posts %}
   {% else %}
-    {% assign posts = site.posts %}
+  {% assign posts = site.posts %}
   {% endif %}
 
 
   {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
+  {%- if page.list_title -%}
+  <h2 class="post-list-heading">{{ page.list_title }}</h2>
+  {%- endif -%}
 
-    <section style="display: grid;gap: 20px;grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));">
-      {%- for post in posts -%}
-      <article  style="border: 1px solid #ffe066;border-radius: 5px;display: flex;flex-direction: column;">
+  <section style=" display: grid; gap: 20px;grid-template-columns: 7fr 5fr;">
+    <article
+      style="  display: flex;flex-direction: column;">
+    <h1>
+      My name is Alexander Johr. Welcome to my Portfolio.
+    </h1>
+    <p>
+      Hallo, willkommen auf meinem Portfolio. Ich bin Softwareentwickler
+      Software Architect based in Germany, crafting beautiful and functional websites and mobile apps.
+    </p>
+    </article>
+    <img style="border-radius: 90px;" src="assets/img/alexander_johr.jpg">
+
+
+  </section>
+
+
+  <h2>Latest Works</h2>
+
+  <section style=" display: grid; gap: 20px;grid-template-columns: repeat(auto-fill,minmax(300px, 1fr)); margin: auto;">
+    {%- for post in posts -%}
+    <article
+      style="overflow: hidden; border-radius: 16px; box-shadow: 0px 5px 20px rgb(0 0 0 / 15%);display: flex;flex-direction: column;">
+      {% if post.image %}
+      <img src="{{ post.url | relative_url }}{{post.image}}">
+
+      {% endif %}
+
+      <div style="padding: 28px;">
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
         </h3>
         {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+        {{ post.excerpt }}
         {%- endif -%}
-      </article>
-      {%- endfor -%}
-    </section>
-
-    <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
-      <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-        </ul>
       </div>
-    {%- endif %}
+
+    </article>
+    {%- endfor -%}
+  </section>
+
+  {% if site.paginate %}
+  <div class="pager">
+    <ul class="pagination">
+      {%- if paginator.previous_page %}
+      <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page
+          }}</a></li>
+      {%- else %}
+      <li>
+        <div class="pager-edge">•</div>
+      </li>
+      {%- endif %}
+      <li>
+        <div class="current-page">{{ paginator.page }}</div>
+      </li>
+      {%- if paginator.next_page %}
+      <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
+      {%- else %}
+      <li>
+        <div class="pager-edge">•</div>
+      </li>
+      {%- endif %}
+    </ul>
+  </div>
+  {%- endif %}
 
   {%- endif -%}
 
