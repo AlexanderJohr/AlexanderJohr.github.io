@@ -6,6 +6,14 @@ categories: vr
 image: virtual_reality_schneeballschlacht.jpg
 ---
 
+Vektor Mathematik Radius
+
+Code
+
+keine Collider
+Netzwerk
+
+Tag der Offenen Tür
 
 JoMash ist eine Erweiterung von Qlik Sense®. Mit Benutzerfreundliche Navigation führt
 einen ohne Programmierkenntnisse durch die Funktionen, die per Drag and Drop für ein

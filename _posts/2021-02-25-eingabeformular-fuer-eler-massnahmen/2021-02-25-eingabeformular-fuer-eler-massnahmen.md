@@ -4,12 +4,32 @@ title:  "Eingabeformular für ELER Maßnahmen"
 date:   2021-02-25 18:00:00 +0100
 categories: jomash
 image: eingabeformular-fuer-eler-massnahmen.jpg
+video: eingabeformular-fuer-eler-massnahmen.webm
 ---
-
 
 JoMash ist eine Erweiterung von Qlik Sense®. Mit Benutzerfreundliche Navigation führt
 einen ohne Programmierkenntnisse durch die Funktionen, die per Drag and Drop für ein
 übersichtliches Seitenlayout sorgt.
+
+{% highlight dart %}
+static final wald = Zielflaeche("Wald/Forst",
+    condition: 
+    isIn({
+        Foerderklasse.erschwernisAusgleich,
+        Foerderklasse.agrarumweltUndKlimaMassnahmeNurVertragsnaturschutz,
+        Foerderklasse.agrarumweltUndKlimaMassnahmeOhneVertragsnaturschutz
+    })
+    .and(
+        isNotIn({
+                    Kategorie.AnbauZwischenfruchtUntersaat,
+                    Kategorie.FoerderungBestimmterRassenUndKulturen
+                })
+        )
+);
+{% endhighlight %}
+
+
+
 
 Dabei ist das Kundenspezifisches Corporate- und das
 responsive Design nur eine der vielen Möglichkeiten die JoMash zu bieten hat.

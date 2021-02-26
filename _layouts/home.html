@@ -22,15 +22,15 @@ layout: default
   <h2 class="post-list-heading">{{ page.list_title }}</h2>
   {%- endif -%}
 
-  <section style=" display: grid; gap: 20px;grid-template-columns: 7fr 5fr;">
-    <article style="  display: flex;flex-direction: column;">
-      <h1>
+  <section style="padding: 5vw 0 3vw; display: grid; gap: 20px;grid-template-columns: 7fr 5fr;">
+    <article style="display: flex; justify-content: center; flex-direction: column; max-width: 1fr;">
+      <h1 style="font-size: min(5vw, 59px) ;">
         Hello World
       </h1>
-      <p>
-        Ich bin Alexander Johr, Software-Entwickler und Clean-Code Enthusiast.
+      <p style="font-size: min(3vw, 35px);">
+        Ich bin Alexander Johr, Software-Entwickler, Dozent und Clean-Code Enthusiast.
       </p>
-      <p>
+      <p style="font-size: min(3vw, 35px);">
         Willkommen auf meiner Seite.
       </p>
 
@@ -41,7 +41,7 @@ layout: default
   </section>
 
 
-  <h2>Latest Works</h2>
+  <h2>Projekte</h2>
 
   <section style=" display: grid; gap: 20px;grid-template-columns: repeat(auto-fill,minmax(300px, 1fr)); margin: auto;">
     {%- for post in posts -%}
