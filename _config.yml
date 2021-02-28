@@ -1,10 +1,10 @@
-title: Portfolio of Alexander Johr
+title: Alexander Johr
 lang: de
 author:
   name: AlexanderJohr
   email: alexander.johr@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
-  My name is Alexander Johr. Welcome to my Portfolio.
+  Ich bin Alexander Johr, Software-Entwickler, Dozent und Clean-Code Enthusiast. Willkommen auf meiner Seite.
 permalink: /:year/:month/:day/:title/
 
 google_analytics: G-RT79Y7XSXB

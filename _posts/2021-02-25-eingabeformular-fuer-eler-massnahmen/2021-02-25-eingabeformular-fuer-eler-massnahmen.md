@@ -5,6 +5,7 @@ date:   2021-02-25 18:00:00 +0100
 categories: jomash
 image: eingabeformular-fuer-eler-massnahmen.jpg
 video: eingabeformular-fuer-eler-massnahmen.webm
+alt_video: eingabeformular-fuer-eler-massnahmen.mp4
 ---
 
 Wie wäre es, wenn ein Multiple Choice Formular eine Auswahl lediglich dann vorschlägt, wenn die Auswahl aus sinnvoll ist? Die Eingabe ginge gewiss schneller vonstatten, da die Anzahl der sinnvollen Optionen geringer ist. Doch was wäre, wenn die gewünschte Auswahl nicht verfügbar ist und der Benutzer kann sich nicht erklären warum? Eine Information darüber, welche Voraussetzung die gewünschte Option erfüllen muss und warum sie es nicht tut, wäre notwendig.
@@ -50,3 +51,5 @@ static final wald = Zielflaeche("Wald/Forst",
 {% endhighlight %}
 
 Die Bedingung lässt sich nun mit der aktuellen Auswahl vergleichen und ein Mengendiagramm gibt Aufschluss darüber, wie die Bedingung aussieht. Ein roter Kreis um die falsche Option zeigt den Fehler der aktuellen Auswahl an.
+
+![Mengendiagramm mit Anzeige der falschen Selektion](eingabeformular-fuer-eler-massnahmen-beispiel.jpg)
