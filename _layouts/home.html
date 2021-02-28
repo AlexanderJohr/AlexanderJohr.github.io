@@ -33,22 +33,21 @@ layout: default
       <p style="font-size: min(3vw, 35px);">
         Willkommen auf meiner Seite.
       </p>
-
     </article>
     <img style="border-radius: 90px;" src="assets/img/alexander_johr.jpg">
-
 
   </section>
 
 
   <h2>Projekte</h2>
-
   <section style=" display: grid; gap: 20px;grid-template-columns: repeat(auto-fill,minmax(300px, 1fr)); margin: auto;">
     {%- for post in posts -%}
     <article
       style="overflow: hidden; border-radius: 16px; box-shadow: 0px 5px 20px rgb(0 0 0 / 15%);display: flex;flex-direction: column;">
       {% if post.image %}
-      <img src="{{ post.url | relative_url }}{{post.image}}">
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        <img src="{{ post.url | relative_url }}{{post.image}}">
+      </a>
 
       {% endif %}
 

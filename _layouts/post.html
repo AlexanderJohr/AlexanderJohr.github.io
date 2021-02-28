@@ -3,20 +3,24 @@ layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 style="font-size: 4vw;" class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+  <header class="post-header" style="padding: min(5vw,58px) 0 min(3vw,35px);">
+    <h1 style="font-size: min(4vw,47px);" class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
   </header>
 
   {%- if page.video -%}
-  <video style="border-radius: 30px;" playsinline autoplay muted loop>
+  <video style="border-radius: 30px; margin-bottom: 48px;" playsinline autoplay muted loop>
     <source src="{{page.video}}"  >
+      {%- if page.alt_video -%}
+      <source src="{{page.alt_video}}"  >
+      {%- endif -%}
     Your browser does not support the video tag.
   </video>
   {%- elsif page.image -%}
-  <img style="border-radius: 30px;" src="{{page.image}}">
-  {%- endif -%}
+  <img style="border-radius: 30px; margin-bottom: 48px;" src="{{page.image}}">
+  {%- endif -%} 
 
-  <header class="post-header">
+  <!--
+  <header class="post-header" style="padding: min(5vw,58px) 0 min(3vw,35px);">
     <p class="post-meta">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -37,7 +41,7 @@ layout: default
       {% endfor %}
       {%- endif -%}
     </p>  </header>
-
+  -->
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}

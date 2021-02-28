@@ -6,29 +6,15 @@ categories: vr
 image: virtual_reality_schneeballschlacht.jpg
 ---
 
-Vektor Mathematik Radius
+Als ein wahrer Besuchermagnet entpuppte sich dieses Spiel. Zwei Spieler bewerfen sich in der virtuellen Realität mit Schneebällen. Zum Schutz können sie sich eine Deckung errichten. Doch Vorsicht, die Deckung kann durch Schneebälle des Gegners wieder eingeworfen werden.
 
-Code
+Besonders fordernd in diesem Projekt war die Vektormathematik. Die Art und Weise, wie sich die Schneebälle zu einer Deckung formen, war sehr speziell und nichts, was sich mit der eingebauten Physik-Engine von Unity so einfach hätte lösen lassen. Also entschied ich, die Physik selbst zu programmieren.
 
-keine Collider
-Netzwerk
+Diese Implementierung ermöglichte das Zusammensetzen komplexer Strukturen. Der verblüffende Erfolg der eigenen Umsetzung: wird ein Schneeball inmitten des Baus zerstört, so fallen alle darauf gebauten Schneebälle physikalisch korrekt zu Boden und setzen sich beim Aufeinanderprallen zu einer neuen Konstellation zusammen.
 
-Tag der Offenen Tür
+Bei der immensen Menge der entstehenden Schneebälle war es außerdem unabdingbar, auch die Netzwerkkommunikation zu optimieren. Die Berechnung der Physik übernahmen beide Clients lokal. Nur wenn es eine Interaktion der Schneebälle mit dem gegnerischen Spieler gab, wurden Netzwerk-Nachrichten abgesendet.
 
-JoMash ist eine Erweiterung von Qlik Sense®. Mit Benutzerfreundliche Navigation führt
-einen ohne Programmierkenntnisse durch die Funktionen, die per Drag and Drop für ein
-übersichtliches Seitenlayout sorgt.
+Viel Dank gilt meinen Teamkollegen: Christin Schwarzer und Erik Masson für die 3D-Modelle und Animationen, Jendrik Stührenberg für seine Unterstützung bei der Programmierung sowie Sebastian Fick für das Projektmanagement.
 
-Dabei ist das Kundenspezifisches Corporate- und das
-responsive Design nur eine der vielen Möglichkeiten die JoMash zu bieten hat.
-JoMash ermöglicht die Erstellung von Qlik Sense Mashups ohne jegliche Programmierkenntnisse.
-Objekte können per Drag and Drop Funktion eingefügt werden und bieten zahlreiche
-Konfigurationen an. So können Objekte ein- und ausgeblendet werden, in ihrer Höhe und
-Breite angepasst werden oder mit einem Exportdialog ausgestattet werden. Zudem können
-Objekte aus unterschiedlichen Qlik Sense Applikationen eingebettet werden.
-Die Navigation enthält mehreren Ebenen und ist genau wie das Seitenlayout mit wenigen
-Klicks erstellt.
-Eine intelligente Suche ermöglicht das Suchen über mehrere Qlik Sense Applikationen.
-Zudem lassen sich die Felder eingrenzen, um die Suchgeschwindigkeit zu erhöhen.
-Über iframes ist die Integration externer Inhalte, wie z.B. Wetterinformationen, Börsencharts
-etc. möglich.
+Ein Video der abgegebenen Spiel-Version ist unter folgendem Link einzusehen:
+https://youtu.be/Sqn1rD50S5Q

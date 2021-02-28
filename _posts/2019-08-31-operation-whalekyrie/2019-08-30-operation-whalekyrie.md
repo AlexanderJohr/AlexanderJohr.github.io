@@ -7,21 +7,12 @@ image: operation-whalekyrie.jpg
 video: operation-whalekyrie.webm
 ---
 
+Wie sehen Delfine im Dunkeln? Durch Echoortung: dem Aussenden von Schallwellen und dem Empfangen der Reflexionen. Doch wie könnte das aussehen? Der Antwort auf diese Frage versuchte ich mich mit diesem Spielprojekt zu nähern.
 
-JoMash ist eine Erweiterung von Qlik Sense®. Mit Benutzerfreundliche Navigation führt
-einen ohne Programmierkenntnisse durch die Funktionen, die per Drag and Drop für ein
-übersichtliches Seitenlayout sorgt.
+Im Rahmen der Spezialisierung “Game Development – Kollaboratives Studio” bei  Prof. Dominik Wilhelm beschäftigte ich mich interdisziplinär mit Shaderprogrammierung. Für das Echtzeittaktik-Spiel “Operation Whalekyrie” sollte die Echoortung als eine fundamentale Spielmechanik fungieren. In dunklen Regionen der Spielwelt können sich nur zwei der insgesamt vier spielbaren Charaktere bewegen: der Delfin und der Orca.
 
-Dabei ist das Kundenspezifisches Corporate- und das
-responsive Design nur eine der vielen Möglichkeiten die JoMash zu bieten hat.
-JoMash ermöglicht die Erstellung von Qlik Sense Mashups ohne jegliche Programmierkenntnisse.
-Objekte können per Drag and Drop Funktion eingefügt werden und bieten zahlreiche
-Konfigurationen an. So können Objekte ein- und ausgeblendet werden, in ihrer Höhe und
-Breite angepasst werden oder mit einem Exportdialog ausgestattet werden. Zudem können
-Objekte aus unterschiedlichen Qlik Sense Applikationen eingebettet werden.
-Die Navigation enthält mehreren Ebenen und ist genau wie das Seitenlayout mit wenigen
-Klicks erstellt.
-Eine intelligente Suche ermöglicht das Suchen über mehrere Qlik Sense Applikationen.
-Zudem lassen sich die Felder eingrenzen, um die Suchgeschwindigkeit zu erhöhen.
-Über iframes ist die Integration externer Inhalte, wie z.B. Wetterinformationen, Börsencharts
-etc. möglich.
+Ich übernahm die Projektleitung, das Gamedesign, sowie die Programmierung der Spiellogik und Grafikeffekte. Äußerst dankbar bin ich für die Hilfe meines Teams, insbesondere Jessica Scheffel für ihr Projektmanagement und die Erstellung eines Intros, Shanice Hofmann für Leveldesign und Schöpfung der Hintergrundstory, Lea Brock für die Bereitstellung von Musik und Soundeffekten, Christopher Thiel für die 3D-Modelle und Animation, Kristina Röpke für das Voiceover des Intros und ihr Charakter Design und Sainab Sakhizada für das UI-Design.
+
+Das Introvideo hier: https://www.youtube.com/watch?v=YkhtfPf5h9A
+
+Der Gameplay Trailer hier: https://www.youtube.com/watch?v=9MEHwYyso-4&t=302s

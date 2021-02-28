@@ -6,29 +6,13 @@ categories: unity vr
 image: point-and-line-to-space.jpg
 ---
 
-Vektor Mathematik Radius
+In einer Kooperation der Hochschule Harz mit der Technischen Universität Tokyo erstellte ich mit drei weiteren japanischen Studenten dieses kompetitive Mobile Game. 
 
-Code
+Prof. Dominik Wilhelm hat diese einzigartige Zusammenarbeit im Rahmen der Spezialisierung International Game Studio ermöglicht. Wir entwickelten ein Spiel für Tabletts, indem zwei Spieler mit ihren Fingern Linien auf der gleichen Leinwand ziehen und aus diesen Linien Formen bilden. Je größer die Formen sind, also je mehr Flächeninhalt sie haben, desto mehr Punkte bekommt der Spieler, der die Fläche erstellt hat. Der Gegenspieler versucht selbst Flächen zu erstellen, um mehr Punkte zu ergattern, oder um den Kontrahenten beim Erstellen seiner Formen zu behindern.
 
-keine Collider
-Netzwerk
+Herausforderung war vor allem die Entwicklung der Netzwerkfähigkeit, aber auch die Sprachbarriere und Zeitverschiebung sorgten für eine spannende Zusammenarbeit.
+Papierprototypen waren eines der Werkzeuge, welche wir nutzten, damit bei der Kommunikation möglichst wenige Missverständnisse auftreten.
 
-Tag der Offenen Tür
+Die Juri, die sich aus den deutschen und japanischen Dozenten zusammensetzte, wählte unter anderem auch unser Team für eines der besten Spiele aus. Dadurch wurde es zu meiner Ehre, das Spiel zusammen mit meinen japanischen Teamkollegen im Goethe-Institut in Tokio vorstellen zu dürfen.
 
-JoMash ist eine Erweiterung von Qlik Sense®. Mit Benutzerfreundliche Navigation führt
-einen ohne Programmierkenntnisse durch die Funktionen, die per Drag and Drop für ein
-übersichtliches Seitenlayout sorgt.
-
-Dabei ist das Kundenspezifisches Corporate- und das
-responsive Design nur eine der vielen Möglichkeiten die JoMash zu bieten hat.
-JoMash ermöglicht die Erstellung von Qlik Sense Mashups ohne jegliche Programmierkenntnisse.
-Objekte können per Drag and Drop Funktion eingefügt werden und bieten zahlreiche
-Konfigurationen an. So können Objekte ein- und ausgeblendet werden, in ihrer Höhe und
-Breite angepasst werden oder mit einem Exportdialog ausgestattet werden. Zudem können
-Objekte aus unterschiedlichen Qlik Sense Applikationen eingebettet werden.
-Die Navigation enthält mehreren Ebenen und ist genau wie das Seitenlayout mit wenigen
-Klicks erstellt.
-Eine intelligente Suche ermöglicht das Suchen über mehrere Qlik Sense Applikationen.
-Zudem lassen sich die Felder eingrenzen, um die Suchgeschwindigkeit zu erhöhen.
-Über iframes ist die Integration externer Inhalte, wie z.B. Wetterinformationen, Börsencharts
-etc. möglich.
+Viel Dank gilt meinen japanischen Teamkollegen: Kazuya Takahashi für die Spielidee und Mockups, Kousuke Kobayashi für Musik und Soundeffekte sowie Kyohei Takabe für die Programmierung der grafischen Nutzeroberfläche.

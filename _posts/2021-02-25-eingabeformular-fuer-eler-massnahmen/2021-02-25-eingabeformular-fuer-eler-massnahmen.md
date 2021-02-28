@@ -7,40 +7,46 @@ image: eingabeformular-fuer-eler-massnahmen.jpg
 video: eingabeformular-fuer-eler-massnahmen.webm
 ---
 
-JoMash ist eine Erweiterung von Qlik Sense®. Mit Benutzerfreundliche Navigation führt
-einen ohne Programmierkenntnisse durch die Funktionen, die per Drag and Drop für ein
-übersichtliches Seitenlayout sorgt.
+Wie wäre es, wenn ein Multiple Choice Formular eine Auswahl lediglich dann vorschlägt, wenn die Auswahl aus sinnvoll ist? Die Eingabe ginge gewiss schneller vonstatten, da die Anzahl der sinnvollen Optionen geringer ist. Doch was wäre, wenn die gewünschte Auswahl nicht verfügbar ist und der Benutzer kann sich nicht erklären warum? Eine Information darüber, welche Voraussetzung die gewünschte Option erfüllen muss und warum sie es nicht tut, wäre notwendig.
+
+Das Thünen-Institut für Ländliche Räume stellte die Entwicklung eines solchen Formulars in Auftrag. Es dient der Erfassung von Fördermaßnahmen des “Europäischen Landwirtschaftsfonds für die Entwicklung des ländlichen Raums” kurz ELER. Die Eingabefelder und die dazugehörigen Auswahloptionen sind zahlreich. 
+
+Um zu gewährleisten, dass eine Auswahl nur dann vorgeschlagen wird, wenn die Auswahl der bisherigen Felder damit kompatibel ist, kann wie folgt realisiert werden:
+
+
+{% highlight dart %}
+static final wald = Zielflaeche("Wald/Forst",
+    condition: (choices) =>
+        (
+            choices.contains(Foerderklasse.erschwernisAusgleich) ||
+            choices.contains(Foerderklasse.agrarumweltUndKlimaMassnahme)
+        ) &&
+        (
+            !choices.contains(Kategorie.FoerderungBestimmterRassenUndKulturen)
+        )
+);
+{% endhighlight %}
+
+Für das Eingabefeld “Zielfläche” kann die Option “Wald/Forst” nur dann gewählt werden, wenn die Funktion “contition” als wahr ausgewertet wird. Wenn zuvor die bei der Förderklasse z.B. der Erschwernisausgleich oder die Agrarumwelt- und Klimamaßnahme und außerdem als Kategorie die Förderung bestimmter Rassen und Kulturen ausgewählt wurde, dann sind die Bedingungen erfüllt und die Option ist auswählbar.
+
+Doch diese Implementierung macht es unmöglich, dem Benutzer einen Hinweis zu geben, warum die Auswahl nicht zur Verfügung steht. condition ist eine Funktion und somit ist es nicht möglich, die notwendige Kombination von Optionen mit den aktuell tatsächlich eingegebenen Optionen zu vergleichen. Zu diesem Zweck muss die Bedingung als Datenstruktur gespeichert sein. Die Datenstruktur muss die logischen Operatoren UND, ODER und NICHT unterstützen, um die Bedingungen abzubilden. Gleichzeitig sollte die Notation einfach lesbar sein, damit die Bedingungen auch mühelos angepasst werden können.
+
+Zu diesem Zweck entwickelte ich meine erste Fluent API, zu deutsch “sprechende Schnittstelle”. Die gleiche Bedingung sieht darin folgendermaßen aus:
+
 
 {% highlight dart %}
 static final wald = Zielflaeche("Wald/Forst",
     condition: 
     isIn({
         Foerderklasse.erschwernisAusgleich,
-        Foerderklasse.agrarumweltUndKlimaMassnahmeNurVertragsnaturschutz,
-        Foerderklasse.agrarumweltUndKlimaMassnahmeOhneVertragsnaturschutz
+        Foerderklasse.agrarumweltUndKlimaMassnahme
     })
     .and(
         isNotIn({
-                    Kategorie.AnbauZwischenfruchtUntersaat,
                     Kategorie.FoerderungBestimmterRassenUndKulturen
                 })
         )
 );
 {% endhighlight %}
 
-
-
-
-Dabei ist das Kundenspezifisches Corporate- und das
-responsive Design nur eine der vielen Möglichkeiten die JoMash zu bieten hat.
-JoMash ermöglicht die Erstellung von Qlik Sense Mashups ohne jegliche Programmierkenntnisse.
-Objekte können per Drag and Drop Funktion eingefügt werden und bieten zahlreiche
-Konfigurationen an. So können Objekte ein- und ausgeblendet werden, in ihrer Höhe und
-Breite angepasst werden oder mit einem Exportdialog ausgestattet werden. Zudem können
-Objekte aus unterschiedlichen Qlik Sense Applikationen eingebettet werden.
-Die Navigation enthält mehreren Ebenen und ist genau wie das Seitenlayout mit wenigen
-Klicks erstellt.
-Eine intelligente Suche ermöglicht das Suchen über mehrere Qlik Sense Applikationen.
-Zudem lassen sich die Felder eingrenzen, um die Suchgeschwindigkeit zu erhöhen.
-Über iframes ist die Integration externer Inhalte, wie z.B. Wetterinformationen, Börsencharts
-etc. möglich.
+Die Bedingung lässt sich nun mit der aktuellen Auswahl vergleichen und ein Mengendiagramm gibt Aufschluss darüber, wie die Bedingung aussieht. Ein roter Kreis um die falsche Option zeigt den Fehler der aktuellen Auswahl an.
