@@ -1,0 +1,10 @@
+Configuration file: /mnt/c/Users/Johr/Temp Documents/GitHub/AlexanderJohr.github.io/_config.yml
+            Source: /mnt/c/Users/Johr/Temp Documents/GitHub/AlexanderJohr.github.io
+       Destination: /mnt/c/Users/Johr/Temp Documents/GitHub/AlexanderJohr.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+                    done in 0.54 seconds.
+ Auto-regeneration: enabled for '/mnt/c/Users/Johr/Temp Documents/GitHub/AlexanderJohr.github.io'
+    Server address: http://127.0.0.1:4000
+  Server running... press ctrl-c to stop.
